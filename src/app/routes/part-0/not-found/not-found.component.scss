@@ -1,0 +1,13 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(darkgrey, .3);
+    flex-direction: column;
+}
+
+img {
+    height: 50vh;
+    width: auto;
+    box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+}

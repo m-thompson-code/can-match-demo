@@ -1,0 +1,45 @@
+:host {
+    margin: 300px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    font-size: 20px;
+}
+button:active {
+    background: darkgrey;
+}
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 20px;
+    width: 20px;
+    border: 0 solid cornflowerblue;
+    border-width: 0;
+    border-radius: 50%;
+
+    pointer-events: none;
+    opacity: 0;
+    animation-name: example;
+    animation-duration: 500ms;
+}
+
+@keyframes example {
+    from {
+        border-width: 25px;
+        opacity: .5;
+        height: 20px;
+        width: 20px;
+    }
+    to {
+        border-width: 5px;
+        opacity: 0;
+        height: 150px;
+        width: 150px;
+    }
+  }

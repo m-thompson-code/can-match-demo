@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router, RouterEvent } from '@angular/router';
+import { filter } from 'rxjs';
+import { FlagsService } from './services/flags/flags.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'can-match';
+  protected readonly flagsService = inject(FlagsService);
+  private readonly router = inject(Router);
+
+  constructor() {
+    // this.router.events.pipe(
+    //    filter((e: unknown): e is RouterEvent => e instanceof RouterEvent)
+    // ).subscribe((e: RouterEvent) => {
+    //   console.log(`%c\t\tRouterEvent: ${e.constructor.name}`, 'color: cornflowerblue');
+    // });
+  }
 }
